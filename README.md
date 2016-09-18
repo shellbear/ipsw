@@ -34,9 +34,9 @@ chmod +x ipws
 
 ####Commands:
 
--e : Explore IPWS file
--m : Make IPWS file
--h : Display help
+"-e : Explore IPWS file"
+"-m : Make IPWS file"
+"-h : Display help"
 
 ####Example:
 
