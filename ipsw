@@ -1,8 +1,8 @@
 #!/bin/bash
 if [[ $# -eq 0 ]] ; then
     echo "Usage : "
-    echo "./ipsw -e /Users/$(whoami)/ios.ipsw"
-    echo "./ipsw -m /Users/$(whoami)/ios"
+    echo "./ipsw -e /Users/$(whoami)/iPhone_4.7.ipws"
+    echo "./ipsw -m /Users/$(whoami)/iPhone_4.7"
     echo "-h To display Help"
     echo
 
@@ -17,9 +17,9 @@ echo "-e : Explore IPSW file "
 echo "-m : Make IPSW file with choosen directory"
 echo "-h : Display this help"
 echo
-echo "Example : ./ipsw -e /Users/$(whoami)/ios.ipsw"
+echo "Example : ./ipsw -e /Users/$(whoami)/iPhone_4.7.ipws"
 echo "Explore the choosen IPSW file"
-echo "Example : ./ipsw -m /Users/$(whoami)/ios"
+echo "Example : ./ipsw -m /Users/$(whoami)/iPhone_4.7"
 echo "Make IPSW file with all files in the choosen directory"
 echo
 
