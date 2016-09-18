@@ -8,6 +8,6 @@ IPWS is a simple script to explore IPWS files and also make them ! This script w
 
 ##Installation
 Terminal Method:
-```ruby
+```bash
 curl -O -L -fsSL https://github.com/ShellBear/ipws/edit/master/
 ```
