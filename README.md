@@ -34,13 +34,14 @@ chmod +x ipws
 
 ####Commands:
 
-*-e : Explore IPWS file
-*-m : Make IPWS file
-*-h : Display help
+ -e : Explore IPWS file
+ -m : Make IPWS file
+ -h : Display help
 
 ####Example:
 
 ./ipws -e /Users/ShellBear/iPhone_4.7.ipws  Explore choosen IPWS file
+
 ./ipws -m /Users/ShellBear/iPhone_4.7/      Make IPWS file with choosen folder
 
 
