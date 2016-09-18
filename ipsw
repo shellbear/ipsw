@@ -1,0 +1,76 @@
+#!/bin/bash
+if [[ $# -eq 0 ]] ; then
+    echo "Usage : "
+    echo "./ipsw -e /Users/$(whoami)/ios.ipsw"
+    echo "./ipsw -m /Users/$(whoami)/ios"
+    echo "-h To display Help"
+    echo
+
+    exit 0
+fi
+
+if [[ $1 = -h ]]
+then  
+echo
+echo "IPSW by ShellBear" 
+echo "-e : Explore IPSW file "
+echo "-m : Make IPSW file with choosen directory"
+echo "-h : Display this help"
+echo
+echo "Example : ./ipsw -e /Users/$(whoami)/ios.ipsw"
+echo "Explore the choosen IPSW file"
+echo "Example : ./ipsw -m /Users/$(whoami)/ios"
+echo "Make IPSW file with all files in the choosen directory"
+echo
+
+elif [[ $1 = -e ]]
+then
+if [[ $2 -eq 0 ]] > /dev/null 2>&1 ; then
+	echo "Please Specify a IPSW file ..."
+    exit 0
+fi
+echo
+echo "IPSW by ShellBear" 
+echo 
+echo "Convert ipsw into zip file"
+osascript -e 'display notification "Starting IPSW Explorer ! " with title "IPSW"'
+directory=$(dirname $2) #Get Directory 
+file=$(basename $2) #Get File
+rename=$(echo "$file" | sed 's/\.ipsw$/\.zip/') 
+namee=$(echo "$file" | sed 's/\.ipsw$/\ /')
+mv $2 $directory/$rename > /dev/null 2>&1
+echo "Unzip ipsw this can take a while ..."
+unzip -o $directory/$rename -d $directory/$namee > /dev/null 2>&1
+echo "Unzip done !"
+mv $directory/$rename $2 > /dev/null 2>&1
+dmg=$(find $directory/$namee -size +500000 -print)
+echo "Converting DMG this can take a while ..."
+hdiutil convert -ov $dmg -format UDRW -o $dmg > /dev/null 2>&1
+echo "Converting Done !"
+echo "Mounting DMG ..."
+hdiutil attach $dmg > /dev/null 2>&1
+echo "Mounting Done !"
+osascript -e 'display notification "Mounting Done !" with title "IPSW"'
+
+elif [[ $1 = -m ]]
+then 
+if [[ $2 -eq 0 ]] > /dev/null 2>&1 ; then
+	echo "Please Specify a Directory ..."
+    exit 0
+fi
+echo "IPSW by ShellBear" 
+echo ""
+echo "Zip files this can take a while ..."
+osascript -e 'display notification "Starting IPSW Maker ! " with title "IPSW"'
+name=$(basename $2)
+path=$(dirname $2)
+zip -r /Users/$(whoami)/Desktop/$name.zip $2 > /dev/null 2>&1
+echo "Zip Done !"
+mv /Users/$(whoami)/Desktop/$name.zip /Users/$(whoami)/Desktop/$name.ipsw > /dev/null 2>&1
+echo "Done ! File saved to : /Users/$(whoami)/Desktop/$name.zip"
+osascript -e 'display notification "Done ! File saved on your Desktop !" with title "IPSW"'
+
+elif [[ $1 = * ]]
+then echo "Invalid Option"
+fi
+
