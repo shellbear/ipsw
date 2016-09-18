@@ -3,8 +3,10 @@ By [ShellBear](https://github.com/ShellBear)
 
 ![Logo](http://cdn.osxdaily.com/wp-content/uploads/2015/09/ipsw-file-icon-288x300.jpg)
 
+
 ## Description
 IPWS is a simple script to explore IPWS files and also make them ! This script will help you to make CFW of any IOS Version.
+
 
 ##Installation
 
@@ -19,6 +21,22 @@ Git Method
 ```shell
 git https://github.com/ShellBear/ipws.git
 ```
+
+
+## Usage
+
+Make this script executable:
+
+```shell
+chmod +x ipws 
+```
+
+Run this script:
+
+```shell
+./ipws
+```
+
 
 ## Author
 
@@ -37,4 +55,3 @@ git https://github.com/ShellBear/ipws.git
 ## License
 
 This script is free of use but please mention me if you use it !
-
