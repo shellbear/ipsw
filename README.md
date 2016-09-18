@@ -11,11 +11,11 @@ IPWS is a simple script to explore IPWS files and also make them ! This script w
 Terminal Method:
 
 ```shell
-curl -O -L -fsSL https://github.com/ShellBear/ipws/edit/master/
+curl -O -L -fsSL https://github.com/ShellBear/ipws/edit/master/ipsw
 ```
 
 Git Method 
 
 ```shell
-git 
+git https://github.com/ShellBear/ipws.git
 ```
