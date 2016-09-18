@@ -13,7 +13,7 @@ IPWS is a simple script to explore IPWS files and also make them ! This script w
 Terminal Method:
 
 ```shell
-curl -O -L -fsSL https://github.com/ShellBear/ipws/edit/master/ipsw
+curl https://raw.githubusercontent.com/ShellBear/ipws/master/ipsw --output ipws --silent
 ```
 
 Git Method: 
