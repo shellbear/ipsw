@@ -7,7 +7,15 @@ By [ShellBear](https://github.com/ShellBear)
 IPWS is a simple script to explore IPWS files and also make them ! This script will help you to make CFW of any IOS Version.
 
 ##Installation
+
 Terminal Method:
+
 ```shell
 curl -O -L -fsSL https://github.com/ShellBear/ipws/edit/master/
+```
+
+Git Method 
+
+```shell
+git 
 ```
