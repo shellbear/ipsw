@@ -19,3 +19,22 @@ Git Method
 ```shell
 git https://github.com/ShellBear/ipws.git
 ```
+
+## Author
+
+* ShellBear (https://github.com/ShellBear/)
+
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
+
+## License
+
+This script is free of use but please mention me if you use it !
+
