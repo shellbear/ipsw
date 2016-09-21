@@ -47,6 +47,13 @@ chmod +x ipws
 ./ipws -m /Users/ShellBear/iPhone_4.7/      Make IPWS file with choosen folder
 
 
+## Versions
+
+1.1 Fixed error when Making ipsw file
+
+1.0 : Original Version of the Script
+
+
 ## Author
 
 * ShellBear (https://github.com/ShellBear/)
