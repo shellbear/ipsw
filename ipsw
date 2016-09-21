@@ -1,4 +1,5 @@
 #!/bin/bash
+#Version 1.1 By ShellBear
 if [[ $# -eq 0 ]] ; then
     echo "Usage : "
     echo "./ipsw -e /Users/$(whoami)/iPhone_4.7.ipws"
@@ -64,7 +65,8 @@ echo "Zip files this can take a while ..."
 osascript -e 'display notification "Starting IPSW Maker ! " with title "IPSW"'
 name=$(basename $2)
 path=$(dirname $2)
-zip -r /Users/$(whoami)/Desktop/$name.zip $2 > /dev/null 2>&1
+cd $path
+zip -r /Users/$(whoami)/Desktop/$name.zip $name > /dev/null 2>&1
 echo "Zip Done !"
 mv /Users/$(whoami)/Desktop/$name.zip /Users/$(whoami)/Desktop/$name.ipsw > /dev/null 2>&1
 echo "Done ! File saved to : /Users/$(whoami)/Desktop/$name.zip"
