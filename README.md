@@ -49,9 +49,9 @@ chmod +x ipws
 
 ## Versions
 
-1.1 Fixed error when Making ipsw file
+* 1.1 Fixed error when Making ipsw file
 
-1.0 : Original Version of the Script
+* 1.0 : Original Version of the Script
 
 
 ## Author
