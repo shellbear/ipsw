@@ -13,13 +13,13 @@ IPSW is a simple script to explore IPWS files and also make them ! This script w
 Terminal Method:
 
 ```shell
-curl https://raw.githubusercontent.com/ShellBear/ipws/master/ipsw --output ipws --silent
+curl https://raw.githubusercontent.com/ShellBear/ipsw/master/ipsw --output ipws --silent
 ```
 
 Git Method: 
 
 ```shell
-git https://github.com/ShellBear/ipws.git
+git https://github.com/ShellBear/ipsw.git
 ```
 
 
@@ -28,8 +28,8 @@ git https://github.com/ShellBear/ipws.git
 Make this script executable and execute it:
 
 ```shell
-chmod +x ipws 
-./ipws
+chmod +x ipsw 
+./ipsw
 ```
 
 ####Commands:
@@ -42,9 +42,9 @@ chmod +x ipws
 
 ####Example:
 
-./ipws -e /Users/ShellBear/iPhone_4.7.ipws  Explore choosen IPWS file
+./ipsw -e /Users/ShellBear/iPhone_4.7.ipws  Explore choosen IPSW file
 
-./ipws -m /Users/ShellBear/iPhone_4.7/      Make IPWS file with choosen folder
+./ipsw -m /Users/ShellBear/iPhone_4.7/      Make IPSW file with choosen folder
 
 
 ## Versions
