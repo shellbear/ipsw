@@ -40,7 +40,7 @@ rename=$(echo "$file" | sed 's/\.ipsw$/\.zip/')
 namee=$(echo "$file" | sed 's/\.ipsw$/\ /')
 mv $2 $directory/$rename > /dev/null 2>&1
 echo "Unzip ipsw this can take a while ..."
-unzip -o $directory/$rename -d $directory/$namee
+unzip -o $directory/$rename -d $directory/$namee > /dev/null 2>&1
 echo "Unzip done !"
 mv $directory/$rename $2 > /dev/null 2>&1
 dmg=$(find $directory/$namee -size +500000 -print)
@@ -63,7 +63,7 @@ echo "Zip files this can take a while ..."
 name=$(basename $2)
 path=$(dirname $2)
 cd $path
-zip -r /Users/$(whoami)/Desktop/$name.zip $name 
+zip -r /Users/$(whoami)/Desktop/$name.zip $name > /dev/null 2>&1
 echo "Zip Done !"
 mv /Users/$(whoami)/Desktop/$name.zip /Users/$(whoami)/Desktop/$name.ipsw > /dev/null 2>&1
 echo "Done ! File saved to : /Users/$(whoami)/Desktop/$name.zip"
