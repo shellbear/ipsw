@@ -34,14 +34,13 @@ echo
 echo "IPSW by ShellBear" 
 echo 
 echo "Convert ipsw into zip file"
-osascript -e 'display notification "Starting IPSW Explorer ! " with title "IPSW"'
 directory=$(dirname $2) #Get Directory 
 file=$(basename $2) #Get File
 rename=$(echo "$file" | sed 's/\.ipsw$/\.zip/') 
 namee=$(echo "$file" | sed 's/\.ipsw$/\ /')
 mv $2 $directory/$rename > /dev/null 2>&1
 echo "Unzip ipsw this can take a while ..."
-unzip -o $directory/$rename -d $directory/$namee > /dev/null 2>&1
+unzip -o $directory/$rename -d $directory/$namee
 echo "Unzip done !"
 mv $directory/$rename $2 > /dev/null 2>&1
 dmg=$(find $directory/$namee -size +500000 -print)
@@ -51,7 +50,6 @@ echo "Converting Done !"
 echo "Mounting DMG ..."
 hdiutil attach $dmg > /dev/null 2>&1
 echo "Mounting Done !"
-osascript -e 'display notification "Mounting Done !" with title "IPSW"'
 
 elif [[ $1 = -m ]]
 then 
@@ -62,15 +60,13 @@ fi
 echo "IPSW by ShellBear" 
 echo ""
 echo "Zip files this can take a while ..."
-osascript -e 'display notification "Starting IPSW Maker ! " with title "IPSW"'
 name=$(basename $2)
 path=$(dirname $2)
 cd $path
-zip -r /Users/$(whoami)/Desktop/$name.zip $name > /dev/null 2>&1
+zip -r /Users/$(whoami)/Desktop/$name.zip $name 
 echo "Zip Done !"
 mv /Users/$(whoami)/Desktop/$name.zip /Users/$(whoami)/Desktop/$name.ipsw > /dev/null 2>&1
 echo "Done ! File saved to : /Users/$(whoami)/Desktop/$name.zip"
-osascript -e 'display notification "Done ! File saved on your Desktop !" with title "IPSW"'
 
 elif [[ $1 = * ]]
 then echo "Invalid Option"
