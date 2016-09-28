@@ -36,13 +36,10 @@ echo
 echo "Convert ipsw into zip file"
 directory=$(dirname $2) #Get Directory 
 file=$(basename $2) #Get File
-rename=$(echo "$file" | sed 's/\.ipsw$/\.zip/') 
 namee=$(echo "$file" | sed 's/\.ipsw$/\ /')
-mv $2 $directory/$rename > /dev/null 2>&1
 echo "Unzip ipsw this can take a while ..."
-unzip -o $directory/$rename -d $directory/$namee > /dev/null 2>&1
+unzip -o $2 -d $directory/$namee > /dev/null 2>&1
 echo "Unzip done !"
-mv $directory/$rename $2 > /dev/null 2>&1
 dmg=$(find $directory/$namee -size +500000 -print)
 echo "Converting DMG this can take a while ..."
 hdiutil convert -ov $dmg -format UDRW -o $dmg > /dev/null 2>&1
@@ -71,4 +68,3 @@ echo "Done ! File saved to : /Users/$(whoami)/Desktop/$name.zip"
 elif [[ $1 = * ]]
 then echo "Invalid Option"
 fi
-
