@@ -49,6 +49,8 @@ chmod +x ipsw
 
 ## Versions
 
+* 1.3 Fixed zip error
+
 * 1.2 Minor update 
 
 * 1.1 Fixed error when Making ipsw file
