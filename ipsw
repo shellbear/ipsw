@@ -59,11 +59,11 @@ echo ""
 echo "Zip files this can take a while ..."
 name=$(basename $2)
 path=$(dirname $2)
-cd $path
-zip -r /Users/$(whoami)/Desktop/$name.zip $name > /dev/null 2>&1
+cd $2
+zip -1 -r $2/$name * > /dev/null 2>&1
 echo "Zip Done !"
-mv /Users/$(whoami)/Desktop/$name.zip /Users/$(whoami)/Desktop/$name.ipsw > /dev/null 2>&1
-echo "Done ! File saved to : /Users/$(whoami)/Desktop/$name.zip"
+mv $2/$name $2/$name.ipsw > /dev/null 2>&1
+echo "Done ! File saved to : $2/$name.ipsw"
 
 elif [[ $1 = * ]]
 then echo "Invalid Option"
